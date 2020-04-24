@@ -1,21 +1,21 @@
 {
 	"name": "PipelineExecutor",
 	"properties": {
+		"description": "Connection to the Function App from ADF for calling the processing pipeline function within the orchestration framework.",
 		"annotations": [
 			"ADF.procfwk"
 		],
 		"type": "AzureFunction",
 		"typeProperties": {
-			"functionAppUrl": "https://pipelineexecutor.azurewebsites.net",
+			"functionAppUrl": "https://paulandrewprocfwk.azurewebsites.net",
 			"functionKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "Keys",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "ExecutorFunctionAppKey"
+				"secretName": "FunctionAppKey"
 			}
-		},
-		"description": "Connection to the Function App from ADF for calling the processing pipeline function within the orchestration framework."
+		}
 	}
 }
