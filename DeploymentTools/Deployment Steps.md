@@ -6,11 +6,14 @@ Furthermore, in the case of most deployment steps, things can be tailored to you
 
 --------------------------------------------------------------------------------------------
 1. Create an Azure Data Factory and connect it to source control - recommended, but not essential.
+   - Root folder = DataFactory
 2. Create an Azure SQLDB and Logical SQL Instance.
 3. Create an Azure Functions App with an App Service Plan if required.
+   - Runtime Stack = .NET Core
 4. Create an Azure Key Vault.
 --------------------------------------------------------------------------------------------
 5. Grant Data Factory access to Key Vault.
+   - Get & List for Secrets
 6. Add the Function App default key to Key Vault as a secret.
 7. Add a SQLDB connection string to Key Vault as a secret using your preferred authentication method.
    - SQL Authentication.
