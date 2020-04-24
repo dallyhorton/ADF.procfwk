@@ -1,13 +1,13 @@
 {
 	"name": "Keys",
 	"properties": {
+		"description": "Connection to Key Vault for all other ADF linked service credentials required to run the processing framework.",
 		"annotations": [
 			"ADF.procfwk"
 		],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://FrameworkKeys.vault.azure.net/"
-		},
-		"description": "Connection to Key Vault for all other ADF linked service credentials required to run the processing framework."
+			"baseUrl": "https://paulandrewprocfwk-kv.vault.azure.net/"
+		}
 	}
 }
