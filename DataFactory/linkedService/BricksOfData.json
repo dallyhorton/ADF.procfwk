@@ -4,17 +4,22 @@
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
-			"domain": "https://northeurope.azuredatabricks.net",
+			"domain": "https://australiaeast.azuredatabricks.net",
 			"accessToken": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "Keys",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "BricksOfDataToken",
+				"secretName": "DatabricksToken",
 				"secretVersion": ""
 			},
-			"existingClusterId": "0422-090117-slots899"
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "1",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "apache-spark-2.4.x-scala2.11"
 		}
 	}
 }
